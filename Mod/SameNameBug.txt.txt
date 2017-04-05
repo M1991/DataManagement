@@ -1,0 +1,3 @@
+When you have multiple input fields with the same name, like radio buttons for example, you are getting one ngModel controller for each input. But, when you addressing this field by name, like this: formName.fieldName, you are getting a reference to the last ngModel controller.
+
+The problem is that this controllers doesn't know about each other and do not coordinate their state. And from the user perspective they must have a shared state.
