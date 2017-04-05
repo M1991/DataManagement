@@ -1,0 +1,53 @@
+
+Digest cycle and $scope
+
+First and foremost, AngularJS defines a concept of a so-called digest cycle. This cycle can be considered as a loop, during which AngularJS checks if there are any changes to all the variables watched by all the $scopes. So if you have $scope.myVar defined in your controller and this variable was marked for being watched, then you are implicitly telling AngularJS to monitor the changes on myVar in each iteration of the loop.
+
+A natural follow-up question would be: Is everything attached to $scope being watched? Fortunately, no. If you would watch for changes to every object in your $scope, then quickly a digest loop would take ages to evaluate and you would quickly run into performance issues. That is why the AngularJS team gave us two ways of declaring some $scope variable as being watched (read below).
+$watch helps to listen for $scope changes
+
+There are two ways of declaring a $scope variable as being watched.
+
+    By using it in your template via the expression <span>{{myVar}}</span>
+    By adding it manually via the $watch service
+
+Ad 1) This is the most common scenario and I'm sure you've seen it before, but you didn't know that this has created a watch in the background. Yes, it had! Using AngularJS directives (such as ng-repeat) can also create implicit watches.
+
+Ad 2) This is how you create your own watches. $watch service helps you to run some code when some value attached to the $scope has changed. It is rarely used, but sometimes is helpful. For instance, if you want to run some code each time 'myVar' changes, you could do the following:
+
+function MyController($scope) {
+
+    $scope.myVar = 1;
+
+    $scope.$watch('myVar', function() {
+        alert('hey, myVar has changed!');
+    });
+
+    $scope.buttonClicked = function() {
+        $scope.myVar = 2; // This will trigger $watch expression to kick in
+    };
+}
+
+$apply enables to integrate changes with the digest cycle
+
+You can think of the $apply function as of an integration mechanism. You see, each time you change some watched variable attached to the $scope object directly, AngularJS will know that the change has happened. This is because AngularJS already knew to monitor those changes. So if it happens in code managed by the framework, the digest cycle will carry on.
+
+However, sometimes you want to change some value outside of the AngularJS world and see the changes propagate normally. Consider this - you have a $scope.myVar value which will be modified within a jQuery's $.ajax() handler. This will happen at some point in future. AngularJS can't wait for this to happen, since it hasn't been instructed to wait on jQuery.
+
+To tackle this, $apply has been introduced. It lets you to start the digestion cycle explicitly. However, you should only use this to migrate some data to AngularJS (integration with other frameworks), but never use this method combined with regular AngularJS code, as AngularJS will throw an error then.
+How is all of this related to the DOM?
+
+Well, you should really follow the tutorial again, now that you know all this. The digest cycle will make sure that the UI and the JavaScript code stays synchronised, by evaluating every watcher attached to the all $scopes as long as nothing changes. If no more changes happen in the digest loop, then it's considered to be finished.
+
+You can attach objects to the $scope object either explicitly in the Controller, or by declaring them in {{expression}} form directly in the view.
+
+I hope that helps to clarify some basic knowledge about all this.
+
+Further readings:
+
+    Make Your Own AngularJS, Part 1: Scopes And Digest (awesome article!)
+	http://stackoverflow.com/questions/15112584/how-do-i-use-scope-watch-and-scope-apply-in-angularjs
+	http://teropa.info/blog/2013/11/03/make-your-own-angular-part-1-scopes-and-digest.html
+	http://tutorials.jenkov.com/angularjs/watch-digest-apply.html
+	https://www.sitepoint.com/mastering-watch-angularjs/
+

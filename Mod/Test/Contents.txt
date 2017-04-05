@@ -1,0 +1,59 @@
+Home
+
+Admin  (no ng-click)
+	User
+	Change Password
+	Log off
+
+Monitor   (no ng-click)
+	Sales
+	Purchase
+	
+	
+	
+Material Management
+    Enquiry
+    Quotation
+    Purchase Order
+    Inward Delivery Challan
+    Item Master
+    Vendors
+    Invoice
+
+Sales
+    Customer Enquiry
+    Generate Quotation
+    Save Purchase Order
+    Delivery Challan
+    Customer Master
+    Invoice
+
+Transactions
+    Receivable
+    Payable
+    Bank
+    Cash
+    Expenses
+
+Calls    (no ng-click)
+	AMC
+	Project Call 
+	Service Call
+	
+Vehicle Tracking Management   (no ng-click)
+	Two-wheeler  
+	Four-Wheeler
+	Service Period
+	
+	
+Report
+	Stock
+	Cash
+	Bank
+	Quotation
+	Project Management	
+	
+Help     (no ng-click)
+	Support Details
+	About Software
+	Extend Evaluation

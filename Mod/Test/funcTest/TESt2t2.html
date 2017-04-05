@@ -1,0 +1,84 @@
+	<!DOCTYPE html>
+	<html ng-app="studentsApp">
+	<head>
+	<title>TestSite</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="content-language">
+	<meta charset="UTF-8">
+	<script src="js/sales/salesDetails.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<script src="../js/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="../js/funcWork.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.14/angular.js"></script>
+	<script src="appFunc.js"></script>
+	</head>
+		<body ng-controller="homeController">
+		<div class="container">
+		<div class="row">
+		<div class="col-sm-8">
+		<h3>Students Form</h3>
+		<form name="StudentForm">
+		<div class="row">
+			<div class="col-sm-6">Details</div>
+			<div class="col-sm-6"></div>
+		</div>
+		<div class="row" ng-repeat="rows in dispdata">
+			<div class="col-sm-2">{{rows.regno}}</div>
+			<div class="col-sm-2">{{rows.name}}</div>
+			<div class="col-sm-2">{{rows.subone}}</div>
+			<div class="col-sm-2">{{rows.subtwo}}</div>
+			<div class="col-sm-2">{{rows.subthree}}</div>
+			<div class="col-sm-2">{{rows.subfour}}</div>
+			
+		
+		</div>
+		<br><br>
+		<div class="row">
+		<div class="col-sm-6">
+		<input type="text" ng-model="formData.regno" placeholder="Reg Number">
+		</div>
+		<div class="col-sm-6">
+		<input type="text" ng-model="formData.name" placeholder="Student Name">
+		</div>
+		</div>
+		<div ng-show="showMarks" ng-repeat="formData in studentMarks">
+		<div class="row">
+		<br>
+		<div class="col-sm-3"><input type="text" ng-model="formData.subone"   
+		placeholder="Subject 1" style="width:70%"></div>
+		<div class="col-sm-3"><input type="text" ng-model="formData.subtwo"     
+		placeholder="Subject 2" style="width:70%"></div>
+		<div class="col-sm-2"><input type="text" ng-model="formData.subthree" 
+		placeholder="Subject 3" style="width:70%"></div>
+		<div class="col-sm-2"><input type="text" ng-model="formData.subfour" 
+		placeholder="Subject 4" style="width:70%"></div>
+		<div class="col-sm-2"><button ng-click="delMarks($index)"> Delete</button></div>
+		</div>
+		</div>
+		<hr>
+		<div class="row">
+		<div class="col-sm-2"></div>
+		<div class="col-sm-2">
+		<button ng-click="addMarks(formData)"><span class="glyphicon glyphicon-plus"></span> Add</button>
+		</div>
+		<div class="col-sm-2"><button ng-click="editEnquiry($index)"> Edit</button>
+		</div>
+		
+		<div class="col-sm-2"><button type="submit" ng-click="saveFullForm(formData)"> Save</button>
+		</div>
+		<div class="col-sm-2">
+		<button onclick="window.print()"> // Print</button>
+		</div>
+		<div class="col-sm-2"></div>
+		</div>
+		</form>
+		</div>
+		<div class="col-sm-4"></div>
+		</div>
+		<br>
+		<br>
+		<br>
+		</div>
+	</body>
+	</html>

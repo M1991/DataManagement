@@ -1,0 +1,28 @@
+<DOCTYPE html>
+<html>
+<head>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+<script src="TestSamp.js"></script>
+</head>
+    <body ng-app="plunker" ng-controller="MainCtrl">
+      <p>Hello {{name}}!</p>
+
+      <div ng-repeat="item in items">
+         {{item.regno}} {{item.section}}
+        {{item.firstName}} {{item.lastName}}
+      </div>
+	  <br>
+	  <form name="itemToAdds">
+        <input type="text" ng-model="itemToAdd.regno" placeholder="Reg NO"/>
+        <input type="text" ng-model="itemToAdd.section"  placeholder="Section"/><br>
+      <div ng-repeat="itemToAdd in itemsToAdd">
+        <input type="text" ng-model="itemToAdd.firstName" />
+        <input type="text" ng-model="itemToAdd.lastName" />
+        <button ng-click="add(itemToAdd)">Add</button>
+      </div>
+      <div>
+        <button type="submit" ng-click="addNew()">Add new</button>
+		</form>
+      </div>
+    </body>
+</html>
