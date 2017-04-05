@@ -9,8 +9,6 @@ Monitor   (no ng-click)
 	Sales
 	Purchase
 	
-	
-	
 Material Management
     Enquiry
     Quotation
@@ -44,7 +42,6 @@ Vehicle Tracking Management   (no ng-click)
 	Two-wheeler  
 	Four-Wheeler
 	Service Period
-	
 	
 Report
 	Stock
