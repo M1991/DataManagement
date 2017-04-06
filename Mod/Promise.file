@@ -1,0 +1,53 @@
+https://developers.google.com/web/fundamentals/getting-started/primers/promises#promise-terminology
+
+JavaScript is single threaded, meaning that two bits of script cannot run at the same time; they have to run one after another. In browsers, JavaScript shares a thread with a load of other stuff that differs from browser to browser. But typically JavaScript is in the same queue as painting, updating styles, and handling user actions (such as highlighting text and interacting with form controls). Activity in one of these things delays the others.
+
+var img1 = document.querySelector('.img-1');
+
+function loaded() {
+  // woo yey image loaded
+}
+
+if (img1.complete) {
+  loaded();
+}
+else {
+  img1.addEventListener('load', loaded);
+}
+
+img1.addEventListener('error', function() {
+  // argh everything's broken
+});
+
+
+---- Events aren't always the best way  ------
+
+Events are great for things that can happen multiple times on the same object—keyup, touchstart etc. With those events you don't really care about what happened before you attached the listener. But when it comes to async success/failure, ideally you want something like this:
+
+img1.callThisIfLoadedOrWhenLoaded(function() {
+  // loaded
+}).orIfFailedCallThis(function() {
+  // failed
+});
+
+// and…
+whenAllTheseHaveLoaded([img1, img2]).callThis(function() {
+  // all loaded
+}).orIfSomeFailedCallThis(function() {
+  // one or more failed
+});
+
+
+----- Promise terminology  ----
+
+A promise can be:
+
+    fulfilled - The action relating to the promise succeeded
+    rejected - The action relating to the promise failed
+    pending - Hasn't fulfilled or rejected yet
+    settled - Has fulfilled or rejected
+
+
+
+
+
