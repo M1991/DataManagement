@@ -1,0 +1,142 @@
+{
+	"type": "object",
+	"title": "Vendor Form",
+	"vendor": {
+				"vendorId":{
+					"type":"string",
+					"title":"Vendor ID",
+					"validationMessage": "This field is Requried",
+					"required":true
+				},
+				"vendorName":{
+					"type":"string",
+					"title":"Vendor Name",
+					"minLength": 4,
+					"maxLength": 50,
+					"validationMessage": "This field is Requried",
+					"required":true
+				},
+				"tinNum":{
+					"type":"string",
+					"title":"TIN Number",
+					"validationMessage": "This field is Requried"
+				},
+				"staxNum":{
+					"type":"string",
+					"title":"Service Tax Number",
+					"validationMessage": "This field is Requried"
+				},
+				"cstNum":{
+					"type":"string",
+					"title":"CST Number",
+					"validationMessage": "This field is Requried"
+				},
+				"panNum":{
+					"type":"string",
+					"title":"PAN Number",
+					"validationMessage": "This field is Requried",
+					"required":true
+				},
+				"venBusDetails":[{
+							"personName":{
+							"type":"string",
+							"title":"Person Name",
+							"validationMessage": "This field is Requried"
+						},
+						"mobileNum":{
+							"type":"number",
+							"title":"Mobile Number",
+							"validationMessage": "This field is Requried",
+							"required":true
+						},
+						"workNum":{
+							"type":"number",
+							"title":"Work Number",
+							"validationMessage": "This field is Requried",
+							"required":true
+						},
+						"emailid":  {
+							"title": "Email ID",
+							"type": "string",
+							"pattern": "^\\S+@\\S+$",
+							"required":true
+							},
+						"venContDetails":[{
+								"addressLine1": {
+								  "title": "Address Line 1",
+								  "type": "string",
+								  "maxLength": 200,
+								  "validationMessage": "This field is Requried"
+								},
+								"addressLine2": {
+								  "title": "Address Line 2",
+								  "type": "string",
+								  "maxLength": 200,
+								  "validationMessage": "This field is Requried"
+								},
+								"addressLine3": {
+								  "title": "Address Line 3",
+								  "type": "string",
+								  "maxLength": 200,
+								  "validationMessage": "This field is Requried"
+								},
+								"city": {
+								  "title": "Address Line 1",
+								  "type": "string",
+								  "maxLength": 20,
+								  "validationMessage": "This field is Requried",
+								  "required":true
+								},
+								"state": {
+								  "title": "Address Line 1",
+								  "type": "string",
+								  "maxLength": 20,
+								  "validationMessage": "This field is Requried",
+								  "required":true
+								},
+								"country": {
+								  "title": "Address Line 1",
+								  "type": "string",
+								  "maxLength": 20,
+								  "validationMessage": "This field is Requried"
+								},
+								"pincode": {
+								  "title": "Vendor Address",
+								  "type": "number",
+								  "minLength": 6,
+								  "maxLength": 7,
+								  "validationMessage": "This field is Requried",
+								  "required":true
+								}
+						}]
+						
+				}]
+				
+		},		
+		"showVenList": [{
+				"vendorId": {
+					"type": "string",
+					"title": "Item ID"
+				},
+				"vendorName": {
+					"type": "string",
+					"title": "Item Name"
+				},
+				"panNum": {
+					"type": "string",
+					"title": "Description"
+				},
+				"mobileNum": {
+					"type": "string",
+					"title": "Mobile Number"
+				},
+				"emailid": {
+					"type": "string",
+					"title": "email Id"
+				}
+				
+		}],
+	"required": ["vendorId","vendorName","panNum","mobileNum","workNum","emailid","city","state","pincode"],	
+	"additionalproperties":true
+
+}

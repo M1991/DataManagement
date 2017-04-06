@@ -1,0 +1,98 @@
+{
+	"type": "object",
+	"title": "Invoice",
+	"invoiceForm": {
+				"vendorId":{
+					"type":"string",
+					"title":"Vendor ID",
+					"validationMessage": "This field is Requried",
+					"required":true
+				},
+				"pono":{
+					"type":"string",
+					"title":"P.O. Number",
+					"validationMessage": "This field is Requried"
+				},
+				"invno":{
+					"type":"string",
+					"title":"Invoice Number",
+					"validationMessage": "This field is Requried"
+				},
+				"tinNum":{
+					"type":"string",
+					"title":"TIN Number",
+					"validationMessage": "This field is Requried"
+				},
+				
+				"vendorName":{
+					"type":"string",
+					"title":"Vendor Name",
+					"minLength": 4,
+					"maxLength": 50,
+					"validationMessage": "This field is Requried",
+					"required":true
+				},
+				"paytype":{
+					"type":"string",
+					"title":"Pay Type",
+					"validationMessage": "This field is Requried"
+				},
+				"invdata":{
+					"type":"string",
+					"title":"Service Tax Number",
+					"validationMessage": "This field is Requried"
+				},
+				"cstNum":{
+					"type":"string",
+					"title":"CST Number",
+					"validationMessage": "This field is Requried"
+				},
+				"showFincYear":{
+					"type":"string",
+					"title":"Financial Year",
+					"validationMessage": "This field is Requried",
+					"required":true
+				},
+				"address": {
+					  "title": "Address",
+					  "type": "string",
+					  "maxLength": 200,
+					  "validationMessage": "This field is Requried"
+				}
+				
+		},		
+	"addItemList": [{
+				"itemId": {
+					"type": "string",
+					"title": "Item ID"
+				},
+				"itemDesc": {
+					"type": "string",
+					"title": "itemDesc"
+				},
+				"price": {
+					"type": "number",
+					"title": "price"
+				},
+				"quantity": {
+					"type": "number",
+					"title": "quantity"
+				},
+				"discount": {
+					"type": "number",
+					"title": "discount"
+				},
+				"tax": {
+					"type": "number",
+					"title": "tax"
+				},
+				"amount": {
+					"type": "number",
+					"title": "amount"
+				}
+				
+		}],
+	"required": ["vendorId","invno","vendorName","invdata","cstNum","address"],	
+	"additionalproperties":true
+
+}

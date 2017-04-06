@@ -1,0 +1,46 @@
+{
+	"type": "object",
+	"title": "Item Master Form",
+	"itemMasterForm": [{
+				"itemId": {
+					"type": "string",
+					"title": "Item ID"
+				},
+				"itemName": {
+					"type": "string",
+					"title": "Item Name"
+				},
+				"noOfUnits": {
+					"type": "number",
+					"title": "Description"
+				},
+				"unitPrice": {
+					"type": "number",
+					"title": "Specification"
+				}
+		}],
+	"addItemList": [{
+				"itemId": {
+					"type": "string",
+					"title": "Item ID"
+				},
+				"itemName": {
+					"type": "string",
+					"title": "Item Name"
+				},
+				"desc": {
+					"type": "string",
+					"title": "Description"
+				},
+				"spec": {
+					"type": "string",
+					"title": "Specification"
+				},
+				"uom": {
+					"type": "string",
+					"title": "UOM"
+				}
+		}],
+	"additionalproperties":true
+
+}

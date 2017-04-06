@@ -1,0 +1,99 @@
+{
+	"type": "object",
+	"title": "Purchase Order Form",
+	"purchaseForm": {
+		"vendorId":{
+			"type":"string",
+			"title":"Vendor ID",
+			"validationMessage": "This field is Requried",
+			"required":true
+		},
+		"vendorName":{
+			"type":"string",
+			"title":"Vendor Name",
+			"minLength": 4,
+			"maxLength": 50,
+			"validationMessage": "This field is Requried",
+			"required":true
+		},
+		"poPerson":{
+			"type":"string",
+			"title":"P.O Person",
+			"validationMessage": "This field is Requried",
+			"required":true
+		},
+		"showFincYear":{
+			"type":"string",
+			"title":"Financial Year",
+			"validationMessage": "This field is Requried",
+			"required":true
+		},
+		"addItemList": [{
+				"itemId": {
+					"type": "string",
+					"title": "Item ID"
+				},
+				"itemName": {
+					"type": "string",
+					"title": "Item Name"
+				},
+				"uom": {
+					"type": "string",
+					"title": "UOM"
+				},
+				"quantity": {
+					"type": "number",
+					"title": "Quantity"
+				},
+				"unitPrice": {
+					"type": "number",
+					"title": "Price"
+				},
+				"discount": {
+					"type": "number",
+					"title": "Discount"
+				},
+				"tax": {
+					"type": "number",
+					"title": "Tax"
+				},
+				"amount": {
+					"type": "number",
+					"title": "Amount"
+				}
+			
+		}],
+		"paymentTnC":{
+			"type":"string",
+			"title":"Payment Terms and Conditions",
+			"maxLength":100
+		},
+		"deliveyTnC":{
+			"type":"string",
+			"title":"Payment Terms and Conditions",
+			"maxLength":100
+		},
+		"sdFirstName":{
+			"type":"string",
+			"title":"Shipping First Name",
+			"maxLength":25,
+			"required":true
+		},
+		"sdLastName":{
+			"type":"string",
+			"title":"Shipping Last Name",
+			"maxLength":20,
+			"required":true
+		},	
+		"sdaddress":{
+			"type":"string",
+			"title":"Address",
+			"maxLength":120,
+			"required":true
+			
+		}
+	},
+	"required": ["vendorId","vendorName","refPerson","sdFirstName","sdLastName","sdaddress"],
+	"additionalproperties":true
+
+}

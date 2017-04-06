@@ -1,0 +1,79 @@
+{
+	"type": "object",
+	"title": "Quotation Form",
+	"quotationForm": {
+		"vendorId":{
+			"type":"string",
+			"title":"Vendor ID",
+			"validationMessage": "This field is Requried",
+			"required": true
+		},
+		"vendorName":{
+			"type":"string",
+			"title":"Vendor Name",
+			"minLength": 4,
+			"maxLength": 50,
+			"validationMessage": "This field is Requried",
+			"required": true
+		},
+		"refPerson":{
+			"type":"string",
+			"title":"REF Person",
+			"validationMessage": "This field is Requried",
+			"required":true
+		},
+		"showFincYear":{
+			"type":"string",
+			"title":"Financial Year",
+			"validationMessage": "This field is Requried",
+			"required":true
+		},
+		"address": {
+			  "title": "Vendor Address",
+			  "type": "string",
+			  "maxLength": 200,
+			  "validationMessage": "This field is Requried",
+			  "required": true
+		},
+		"quotGenPerson":{
+			"type":"string",
+			"title":"Generated Person",
+			"validationMessage": "This field is Requried",
+			"required":true
+		},
+		"addItemList": [{
+				"itemId": {
+					"type": "string",
+					"title": "Item ID"
+				},
+				"itemName": {
+					"type": "string",
+					"title": "Item Name"
+				},
+				"uom": {
+					"type": "string",
+					"title": "UOM"
+				},
+				"quantity": {
+					"type": "number",
+					"title": "Quantity"
+				},
+				"price": {
+					"type": "number",
+					"title": "Price"
+				},
+				"tax": {
+					"type": "number",
+					"title": "Tax"
+				},
+				"amount": {
+					"type": "number",
+					"title": "Amount"
+				}
+			
+		}]
+	},
+	"required": ["vendorId","vendorName","refPerson","address","quotGenPerson"],
+	"additonalproperties":true
+
+}

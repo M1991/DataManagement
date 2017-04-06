@@ -1,0 +1,82 @@
+{
+	"type": "object",
+	"title": "Purchase Order Form",
+	"inwardDCForm": {
+		"vendorId":{
+			"type":"string",
+			"title":"Vendor ID",
+			"validationMessage": "This field is Requried",
+			"required":true
+		},
+		"vendorName":{
+			"type":"string",
+			"title":"Vendor Name",
+			"minLength": 3,
+			"maxLength": 50,
+			"validationMessage": "This field is Requried",
+			"required":true
+		},
+		"eSugamId":{
+			"type":"string",
+			"title":"E-Sugam ID",
+			"minLength": 2,
+			"maxLength": 50,
+			"validationMessage": "This field is Requried",
+			"required":true
+		},
+		"showFincYear":{
+			"type":"string",
+			"title":"Financial Year",
+			"validationMessage": "This field is Requried",
+			"required":true
+		},
+		"purchaseOrderId":{
+			"type":"string",
+			"title":"Purchase Order ID",
+			"validationMessage": "This field is Requried",
+			"required":true
+		},
+		"modeofdelivery":{
+			"type":"string",
+			"title":"Mode of Delivery",
+			"validationMessage": "This field is Requried",
+			"required":true
+		},
+		"idcRecvname":{
+			"type":"string",
+			"title":"Receivers Name",
+			"validationMessage": "This field is Requried",
+			"required":true
+		},
+		"addItemList": [{
+				"itemId": {
+					"type": "string",
+					"title": "Item ID"
+				},
+				"itemName": {
+					"type": "string",
+					"title": "Item Name"
+				},
+				"quantity": {
+					"type": "number",
+					"title": "Quantity"
+				},
+				"unitPrice": {
+					"type": "number",
+					"title": "Price"
+				},
+				"tax": {
+					"type": "number",
+					"title": "Tax"
+				},
+				"amount": {
+					"type": "number",
+					"title": "Amount"
+				}
+			
+		}]
+	},
+	"required": ["vendorId","vendorName","eSugamId","purchaseOrderId","modeofdelivery","idcRecvname"],
+	"additionalproperties":true
+
+}

@@ -1,0 +1,76 @@
+{
+	"type": "object",
+	"title": "Enquiry Form",
+	"enquiryForm": {
+		"vendorId":{
+			"type":"string",
+			"title":"Vendor ID",
+			"validationMessage": "This field is Requried",
+			"required":true
+		},
+		"vendorName":{
+			"type":"string",
+			"title":"Vendor Name",
+			"minLength": 4,
+			"maxLength": 20,
+			"validationMessage": "This field is Requried",
+			"required":true
+		},
+		"enquiryRef":[{
+			"value":"ref1",
+			"title":"REF Person"
+			},{
+			"value":"ref2",
+			"title":"REF Person"
+			},{
+			"value":"ref3",
+			"title":"REF Person"
+			}
+		],
+		"enqAddress": {
+			  "title": "Vendor Address",
+			  "type": "string",
+			  "maxLength": 200,
+			  "validationMessage": "This field is Requried",
+			  "required":true
+		}
+	},
+	
+      "enquiryList": {
+			"type": "array",
+			"title": "Add items",
+			"enquiryList": {
+				"itemId": {
+					"type": "string",
+					"title": "Item ID"
+				},
+				"itemName": {
+					"type": "string",
+					"title": "Item Name"
+				},
+				"uom": {
+					"type": "string",
+					"title": "UOM"
+				},
+				"quantity": {
+					"type": "number",
+					"title": "Quantity"
+				},
+				"price": {
+					"type": "number",
+					"title": "Price"
+				},
+				"discount": {
+					"type": "number",
+					"title": "Discount"
+				},
+				"amount": {
+					"type": "number",
+					"title": "Amount"
+				}
+			}
+		},
+	"required": ["vendorId","itemId","enquiryRef","enqAddress"],
+	"additionalproperties":true
+
+}
