@@ -1,0 +1,710 @@
+
+#userContent {
+	
+	background-color: #3175B0;
+/* well gray - #f5f5f5 
+
+
+*/
+}
+/*	background-image:url("../images/imguserda.jpg"); 
+
+	background-image:url("../images/contactus2.jpg"); */
+
+/*
+		GLYPHICON COLOR WHITE
+*/
+.white {
+	color:white;
+	
+}
+
+/*
+		USER PAGE AUTHENTICATION BUTTONS
+*/
+.btnUser{
+	height:25px;
+	width:50px;
+	text-align:center;
+	
+}
+
+
+/*
+fieldset {
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border:1px solid #999;
+	border-radius:8px;
+	
+}
+
+legend {
+	background:#fff;
+	font-size:15px;
+	margin-top:10px;
+}
+*/
+
+.venDesign {
+	overflow:none;
+	
+}
+
+.venDesign. input[type="text"]{
+	width:5%;
+}
+
+
+fieldset {
+    display:block;
+    margin-right: 0px;
+    padding: 0px;
+    border:1px solid #999;
+	border-radius:5px;
+	overflow:none;
+}
+
+legend {
+	display:run-in;
+	border:0px;
+	width:inherit;
+	padding:0px;
+	font-style:none;
+	font-variant:none;
+	border-bottom:0px;
+	font-size:15px;
+	margin-top:7px;
+	clear:both;
+}
+
+	/* formPO for Purchase Order forms */
+	
+	.formPO { 
+		width:60%;
+	}
+	
+	
+	
+	
+	
+
+/*
+		FORM TABLES
+
+.form-inline >.tabled{
+	padding:10px;
+	border:1px;
+	
+}*/
+
+
+/*
+		SEARCH BAR IN MATERIAL MANAGEMENT FORMS
+
+*/
+.mmSearch{
+	margin-top:0px;
+	
+	float:right;
+	width:210px;
+	border-radius:15px;
+	z-index:1;
+}
+
+.innerFormSearch{
+	border-radius:15px;
+	z-index:1;
+}
+
+.row{
+	padding:0px;
+	
+}
+
+/*
+	FORM INPUT BOXES
+*/
+
+.smBox {
+		border-radius:0px;
+		border-bottom:1px solid gray;
+		border-left:1px solid gray ;
+		border-right:1px solid gray;
+		border-top:1px solid gray;
+		min-width:10px;
+		width:100px;
+		display:inline;
+		
+}
+
+.sdBox {
+		border-radius:0px;
+		border-bottom:1px solid gray;
+		border-left:1px solid gray ;
+		border-right:1px solid gray;
+		border-top:1px solid gray;
+		min-width:10px;
+		width:130px;
+		display:inline;
+		
+}
+
+
+.mdBox {
+		border-radius:0px;
+		border-bottom:1px solid gray;
+		border-left:1px solid gray ;
+		border-right:1px solid gray;
+		border-top:1px solid gray;
+		min-width:10px;
+		width:auto;
+		display:inline;
+		
+}
+
+.lgBox {
+		border-radius:0px;
+		border-bottom:1px solid gray;
+		border-left:1px solid gray ;
+		border-right:1px solid gray;
+		border-top:1px solid gray;
+		min-width:10px;
+		width:220px;
+		display:inline;
+		
+}
+.dashBox {
+		border-radius:0px;
+		margin-left:1px;
+		margin-right:1px;
+		border-bottom:1px solid black;
+		border-top:0px;
+		border-right:0px;
+		border-left:0px;
+		min-width:10px;
+		max-width:60px;
+		width:200px;
+		display:inline;
+		background-color:inherit;
+	
+}
+
+.dashBoxMed {
+		border-radius:0px;
+		margin-left:1px;
+		margin-right:1px;
+		border-bottom:1px solid black;
+		border-top:0px;
+		border-right:0px;
+		border-left:0px;
+		min-width:10px;
+		background-color:inherit;
+		width:200px;
+		display:inline;
+	
+}
+
+.dashBoxLong {
+		border-radius:0px;
+		margin-left:1px;
+		margin-right:1px;
+		border-bottom:1px solid black;
+		border-top:0px;
+		border-right:0px;
+		border-left:0px;
+		min-width:10px;
+		max-width:200px;
+		background-color:inherit;
+		display:inline;
+	
+}
+
+.dashBoxExtraLong {
+		border-radius:0px;
+		margin-left:1px;
+		margin-right:1px;
+		border-bottom:1px solid black;
+		border-top:0px;
+		border-right:0px;
+		border-left:0px;
+		min-width:10px;
+		max-width:600px;
+		width:600px;
+		display:inline;
+		background-color:inherit;
+}
+
+.col-sm-9 > .col-xs-2 {
+	cellpadding:0px;
+	cellspacing:0px;
+}
+
+
+.white:hover {
+	color:black;
+}
+.container {
+		margin-top:12px;
+	}
+	
+.pager {
+		margin-top:2px;
+		position:right;
+	}
+	
+.container-fluid{
+		margin-top:0px;
+		background-color:skyblue;
+		
+	}
+
+#navg {
+	padding:0px;
+	z-index:10;
+	
+	
+}
+
+/*
+		CUSTOM WELL - .smWell FORMS ONLY
+
+	
+*/
+
+.smWell {
+  min-height: 20px;
+  padding: 12px 2px 6px 15px;
+  
+  margin-bottom: 3px;
+  background-color: #dadadc;
+  margin-left:5px;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+		  
+	font-family:Times New Roman;	  
+}
+.smWell blockquote {
+  border-color: #ddd;
+  border-color: rgba(0, 0, 0, .15);
+}
+.smWell-lg {
+  padding: 24px;
+  border-radius: 6px;
+}
+.smWell-sm {
+  padding: 6px;
+  border-radius: 3px;
+}
+
+
+#logb {}
+
+
+	.mainrow {
+		margin-left:5px;
+	}
+	
+	.tabsign th {
+		text-align:center;
+	}
+	/* bank and cash table */
+	
+	.tabsign {
+		cellspacing:15px;
+		cellpadding:15px;
+	}
+	
+	/* bank and cash table */
+	.signchange {	
+		margin-left:15px;
+		margin-right:15px;
+		border-bottom:1px solid black;
+		border-top:0px;
+		border-right:0px;
+		border-left:0px;
+		background-color:inherit;
+	}
+	
+	.VendorWell {
+		min-height: 20px;
+		padding: 19px;
+		margin-bottom:20px;
+		margin-right:-20px;
+		background-color: #f5f5f5;
+		border: 1px solid #e3e3e3;
+		border-radius: 4px;
+		-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+		padding: 9px;
+		border-radius: 3px;
+	
+	}
+	
+
+.navbar-header {
+	
+}
+
+#textContent {
+	font-size:25px;
+	margin-left:5px;
+	margin-top:10px;
+	font-family: Times New Roman;
+	color:black;
+	
+}
+/*
+		EFFECTIVE IN ALL PANEL DESIGNS
+
+*/
+
+.panel-default > .panelDesign {
+	background-color: #00B9F5;
+	background-image:none;
+	border-color:#00B9F5;
+	border:1px;
+	color:white;
+}
+
+/*
+		NEW TURQUOISE PANEL DESIGNS
+
+*/
+.panel-trq {
+  border-color: #00B9F5;
+}
+.panel-trq > .panel-heading {
+  color: white;
+  background-color: #00B9F5;
+  border-color: #00B9F5;
+}
+.panel-trq > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #00B9F5;
+}
+.panel-trq > .panel-heading .badge {
+  color: #f5f5f5;
+  background-color: #00B9F5;
+}
+.panel-trq > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #00B9F5;
+}
+
+/*
+		FORM DESIGN PANEL DESIGNS
+
+*/
+.panel-frm {
+  border-color: #E9E9E9;
+}
+.panel-frm > .panel-heading {
+  color: black;
+  background-color: #E9E9E9;
+  border-color: #E9E9E9;;
+}
+.panel-frm > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #E9E9E9;
+}
+.panel-frm > .panel-heading .badge {
+  color: #E9E9E9;
+  background-color: #E9E9E9;
+}
+.panel-frm > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #E9E9E9;
+}
+
+
+
+
+/*
+		NEW GRAY PANEL DESIGNS
+
+*/
+.panel-gry {
+  border-color: #DADADC;
+}
+.panel-gry > .panel-heading {
+  color: black;
+  background-color: #DADADC;
+  border-color: #DADADC;;
+}
+.panel-gry > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #DADADC;
+}
+.panel-gry > .panel-heading .badge {
+  color: #DADADC;
+  background-color: #DADADC;
+}
+.panel-gry > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #DADADC;
+}
+
+/*
+		BUTTONS IN GRAY COLORS ALL btn-gry
+
+.btn-default{
+	background-color: #00B9F5;
+	
+}
+*/
+.btn-gry {
+  color: black;
+  background-color:#E9E9E9;
+  border-color: #ccc;
+}
+.btn-gry:focus,
+.btn-gry.focus {
+  color: #333;
+  background-color: #E9E9E9;
+  border-color: #8c8c8c;
+}
+.btn-gry:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.btn-gry:active,
+.btn-gry.active,
+.open > .dropdown-toggle.btn-gry {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.btn-gry:active:hover,
+.btn-gry.active:hover,
+.open > .dropdown-toggle.btn-gry:hover,
+.btn-gry:active:focus,
+.btn-gry.active:focus,
+.open > .dropdown-toggle.btn-gry:focus,
+.btn-gry:active.focus,
+.btn-gry.active.focus,
+.open > .dropdown-toggle.btn-gry.focus {
+  color: #333;
+  background-color: #d4d4d4;
+  border-color: #8c8c8c;
+}
+.btn-gry:active,
+.btn-gry.active,
+.open > .dropdown-toggle.btn-gry {
+  background-image: none;
+}
+
+
+
+
+/*
+		BUTTONS IN TURQUOISE COLORS ALL btn-trq
+
+.btn-default{
+	background-color: #00B9F5;
+	
+}
+*/
+.btn-trq {
+  color: white;
+  background-color:#00B9F5;
+  border-color: #ccc;
+}
+.btn-trq:focus,
+.btn-trq.focus {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #8c8c8c;
+}
+.btn-trq:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.btn-trq:active,
+.btn-trq.active,
+.open > .dropdown-toggle.btn-trq {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.btn-trq:active:hover,
+.btn-trq.active:hover,
+.open > .dropdown-toggle.btn-trq:hover,
+.btn-trq:active:focus,
+.btn-trq.active:focus,
+.open > .dropdown-toggle.btn-trq:focus,
+.btn-trq:active.focus,
+.btn-trq.active.focus,
+.open > .dropdown-toggle.btn-trq.focus {
+  color: #333;
+  background-color: #d4d4d4;
+  border-color: #8c8c8c;
+}
+.btn-trq:active,
+.btn-trq.active,
+.open > .dropdown-toggle.btn-trq {
+  background-image: none;
+}
+
+/*
+	OVERALL TURQUOISE COLOR
+
+*/
+
+.def{
+	background-color: #00B9F5;
+	
+}
+.well {
+	margin-left:8px;
+}
+
+#enquiryBox {			
+	color:black;
+	font-family:Times New Roman;
+	margin-left:-5px;
+	margin-right:-25px;
+	margin-top:15px;
+	margin-bottom:15px;
+	opacity:0.9;
+	outline-offset:1px;
+	border: 2px solid white;
+	border-radius:5px;
+				
+		}
+		
+#userFirsText {
+	font-size:22px;
+	font-family:Verdana;
+	margin-left:3px;
+	
+	
+}
+
+#userSecondText {
+	font-size:16px;
+	font-family:Times New Roman;
+	margin-left:3px;
+	
+}
+
+.ipbox { 
+	width:97%;
+	margin-left:3px;
+	margin-right:0px;
+	border-radius:5px;
+		
+} 
+
+/*
+	ONLY BOTTOM BORDER, TRANSPARENT BOX
+
+
+.ipbox {
+	width:97%;
+	margin-left:3px;
+	margin-right:0px;
+	box-shadow:none;
+	border-radius:0px;
+	border-bottom: 2px solid red;
+	border-bottom-style:1px solid black;
+	border-left-style:none;
+	border-top-style:none;
+	border-right-style:none;
+	background-color:inherit;
+	color:black;
+		
+} 
+*/
+.bsubmit {
+	width:97%;
+	margin-left:3px;
+	margin-right:9px;
+	margin-bottom:3px;
+}
+
+div.container-fluid ul,li {
+	
+	padding-left:0px;
+}
+
+well ul, li {
+	padding-left:2px;
+	
+}
+
+p {
+	color:black;
+	font-size:16px;
+	}
+
+/*
+
+		SEARCH BAR
+*/	
+	
+
+		
+/*
+
+		NAVIGATION BAR DROPDOWNS
+
+.dropbtn {
+   background-color:blue;
+    color: white;
+    padding:6px;
+    font-size: 10px;
+    border-radius:5px;
+   
+}
+*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+	padding-left:0px;
+	padding-right:2px;
+	
+}
+
+.dropdown-content {
+    
+   
+    background-color: #f9f9f9;
+    min-width: 120px;
+   list-style-type:none;
+   list-style:none;
+    z-index: 10;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 4px 4px;
+    text-decoration: none;
+    display: block;
+	list-style-type:none;
+	font-size: 13px;
+}
+
+.dropdown-content a:hover {
+	background-color: #f1f1f1;
+	 list-style:none;
+	}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+	 list-style:none;
+}
+
+/*
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+*/
+
+.navalign {
+	text-align:center;
+}
