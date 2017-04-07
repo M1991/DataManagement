@@ -1,0 +1,44 @@
+<DOCTYPE html>
+<html>
+<head>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+<script src="Testcalctax.js"></script>
+</head>
+    <body ng-app="plunker" ng-controller="MainCtrl">
+      <p>Hello {{name}}!</p>
+
+      <div ng-repeat="item in items">
+         {{item.itemId}} {{item.itemName}}
+        {{item.quantity}} {{item.unitPrice}}
+        {{item.discount}} {{item.amount}}
+      </div>
+	  
+	  <div id="dispdiv">
+		Total = <span id="tot"></span><br>
+		After Disc = <span id="disctot"></span><br>
+		tax = <span id="taxtot"></span><br>
+		Sum Total = <span id="sumtot"></span><br>
+	  </div>
+	  <br>
+       <form name="testform">
+	   <!-- <div data-ng-repeat="quotn in quotationList"> -->
+					<br>
+					<!-- <input type="text" id="itemId" ng-model="quotn.itemId" placeholder="Item ID"> -->
+					<!-- <input type="text" id="itemName" ng-model="quotn.itemName" placeholder="Item Name"> -->
+					<!-- <input type="text" id="uom" ng-model="quotn.uom" placeholder="UOM"> -->
+					<input type="text" id="quantity" ng-model="quotn.quantity" placeholder="Quantity">
+					<input type="text" id="uprice" ng-model="quotn.unitPrice" placeholder="Unit Price" ng-keypress="qtupcalc()">
+					<input type="text" id="discount" ng-model="quotn.discount" placeholder="Discount" ng-keypress="disccalc()">
+					<select id="tax" ng-model="quotn.tax" ng-keypress="taxcalc(quotn.tax)">
+						<option value="14.2">14.2%</option>
+						<option value="5.4">5.2%</option>
+					</select>
+					<input type="text" name="amoun" id="amoun" ng-model="quotn.amount" disabled="true">
+						<div class="col-xs-1">
+							<button ng-click="removeNewChoice($index)"><span class="glyphicon glyphicon-remove"></span>Remove</button>
+						</div>				
+					<button type="submit" ng-click="saveform(quotn)">Save</button>
+					<button ng-click="consoleform(quotn)">Console Display</button>
+		</form>				
+    </body>
+</html>

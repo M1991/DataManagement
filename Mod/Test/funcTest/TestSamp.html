@@ -12,7 +12,6 @@
         {{item.firstName}} {{item.lastName}}
       </div>
 	  <br>
-	  <form name="itemToAdds">
         <input type="text" ng-model="itemToAdd.regno" placeholder="Reg NO"/>
         <input type="text" ng-model="itemToAdd.section"  placeholder="Section"/><br>
       <div ng-repeat="itemToAdd in itemsToAdd">
@@ -21,8 +20,7 @@
         <button ng-click="add(itemToAdd)">Add</button>
       </div>
       <div>
-        <button type="submit" ng-click="addNew()">Add new</button>
-		</form>
+        <button ng-click="addNew()">Add new</button>
       </div>
     </body>
 </html>

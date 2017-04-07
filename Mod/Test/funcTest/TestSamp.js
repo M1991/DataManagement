@@ -1,27 +1,21 @@
-    var app = angular.module('plunker', []);
+    var app = angular.module('plunker', ['$rootScope']);
 
-    app.controller('MainCtrl', function($scope) {
+    app.controller('MainCtrl', function($rootScope,$scope) {
 
       $scope.items = [];
 
       $scope.itemsToAdd = [{
-		regno:'',
-		section:'',
         firstName: '',
         lastName: ''
       }];
 
       $scope.add = function(itemToAdd) {
-	
+		$scope.$apply();
         var index = $scope.itemsToAdd.indexOf(itemToAdd);
-		console.log(index);
+
         $scope.itemsToAdd.splice(index, 1);
-		itemToAdd.regno = $scope.itemsToAdd.regno;
-		itemToAdd.section = $scope.itemsToAdd.section;
 
-
-		$scope.items.push(angular.copy(itemToAdd))
-		console.log($scope.items);
+        $scope.items.push(angular.copy(itemToAdd))
       }
 
       $scope.addNew = function() {
