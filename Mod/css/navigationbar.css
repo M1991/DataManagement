@@ -1,0 +1,107 @@
+.dropbtn {
+    color: black;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+	border-radius:5px;
+	list-style-type:none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+	padding-left:0px;
+	padding-right:2px;
+}
+
+.dropdown a:hover{
+   color:black;
+   background-color: #49b3f3;
+}
+
+ul .nav .nav-pills li .dropdown a .dropdown-toggle .navalign:hover{
+	 background-color: #49b3f3;
+	
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+	list-style-type:none;
+	list-style:none;
+    z-index: 10;
+}
+
+.dropdown-content a {
+    color: black;
+	background-color: #f9f9f9;
+	padding: 4px 4px;
+    text-decoration: none;
+    display: block;
+	list-style-type:none;
+	font-size: 13px;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+	list-style:none;
+	text-align:left;
+}
+
+.dropdown:hover .dropbtn {
+    background-color:  #54c8fc;
+}
+
+ul li active{
+	list-style-type:none;
+}
+
+button.dropbtn {
+	list-style-type:none;
+	
+}
+
+	
+.container-fluid{
+		margin-top:0px;
+		background-color:#DADADC;
+		margin-left:19px;
+		margin-right:14px;
+	}
+
+.conDesign{
+	margin-top:0px;
+	background-color: #49b3f3;
+	text-align:center;	
+}
+	
+.conDesign a{
+	color: #4e4e55;
+}	
+	
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+}
+
+#navg {
+	padding:0px;
+	z-index:10;
+		
+}
+	
+.navalign {
+	text-align:center;
+	color:white;
+}
+
+.navalign a:hover {
+	background-color: #012B72;
+}
