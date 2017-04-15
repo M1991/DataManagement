@@ -64,9 +64,7 @@ ul li active{
 button.dropbtn {
 	list-style-type:none;
 	
-}
-
-	
+}	
 .container-fluid{
 		margin-top:0px;
 		background-color:#DADADC;
@@ -96,12 +94,10 @@ button.dropbtn {
 	z-index:10;
 		
 }
-	
 .navalign {
 	text-align:center;
 	color:white;
 }
-
 .navalign a:hover {
 	background-color: #012B72;
 }
