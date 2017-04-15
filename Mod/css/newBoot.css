@@ -18,10 +18,6 @@
 /*	background-image:url("../images/imguserda.jpg"); 
 
 	background-image:url("../images/contactus2.jpg"); */
-
-/*
-		GLYPHICON COLOR WHITE
-*/
 .white {
 	color:white;
 	
@@ -47,28 +43,6 @@ fieldset[disabled] .smBoxim {
   background-color: white;
   opacity: 1;
 }
-
-/*
-fieldset {
-    display: block;
-    margin-left: 2px;
-    margin-right: 2px;
-    padding-top: 0.35em;
-    padding-bottom: 0.625em;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
-    border:1px solid #999;
-	border-radius:8px;
-	
-}
-
-legend {
-	background:#fff;
-	font-size:15px;
-	margin-top:10px;
-}
-*/
-
 .venDesign {
 	overflow:none;
 	
@@ -107,21 +81,6 @@ legend {
 		width:60%;
 	}
 	
-	
-	
-	
-	
-
-/*
-		FORM TABLES
-
-.form-inline >.tabled{
-	padding:10px;
-	border:1px;
-	
-}*/
-
-
 /*
 		SEARCH BAR IN MATERIAL MANAGEMENT FORMS
 
