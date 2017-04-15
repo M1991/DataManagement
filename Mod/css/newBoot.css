@@ -589,26 +589,6 @@ legend {
 		
 } 
 
-/*
-	ONLY BOTTOM BORDER, TRANSPARENT BOX
-
-
-.ipbox {
-	width:97%;
-	margin-left:3px;
-	margin-right:0px;
-	box-shadow:none;
-	border-radius:0px;
-	border-bottom: 2px solid red;
-	border-bottom-style:1px solid black;
-	border-left-style:none;
-	border-top-style:none;
-	border-right-style:none;
-	background-color:inherit;
-	color:black;
-		
-} 
-*/
 .bsubmit {
 	width:97%;
 	margin-left:3px;
