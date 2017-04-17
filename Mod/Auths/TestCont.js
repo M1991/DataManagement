@@ -1,11 +1,8 @@
 //
 //	VENDOR CONTROL
 //
-
 obj.controller("vendorCrtl", ['$scope','$http','$log', function($scope, $http, $log){
-	
-	$scope.venBusDetails = [{
-		
+	$scope.venBusDetails = [{	
 	}]; //LOCAL ARRAYS
 	$scope.venContDetails = []; //LOCAL ARRAYS
 	$scope.venFullAddress=[];  //REST DATA
