@@ -185,9 +185,7 @@ obj.controller("vendorCrtl", ['$scope','$http','$log', function($scope, $http, $
 		res.error(function(data, status, headers, config) {
 			alert( "failure message: " + JSON.stringify({data: data}));
 		});		
-		
-
-		// Making the fields empty
+				// Making the fields empty
 		//
 		$scope.vendorName='';
 		$scope.tinNum='';
@@ -210,6 +208,4 @@ obj.controller("vendorCrtl", ['$scope','$http','$log', function($scope, $http, $
      // document.body.innerHTML = originalContents;
 	// };
 	
-
-
 }]);
