@@ -101,9 +101,6 @@ obj.controller("vendorCrtl", ['$scope','$http','$log', function($scope, $http, $
 	
 	$scope.addFullDet = function(index){
 		$scope.ModalBody=true;
-		// $scope.venaddDetails=false;
-		// $scope.venaddDetails=true;
-		
 		addModalFullDet(index);
 		// countvenBd = $scope.venBusDetails.length+1;
 		// $scope.venBusDetails.push({
