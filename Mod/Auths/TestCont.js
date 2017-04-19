@@ -17,10 +17,6 @@ obj.controller("vendorCrtl", ['$scope','$http','$log', function($scope, $http, $
 	var countvenCd;
 	var countvenCddel;
 	
-	// $scope.push({
-		
-	// });
-	
 	$scope.showNewItem = function(vendorItem){
 		$scope.vendorAddNew=true;
 		$scope.modalBt=true;
