@@ -7,7 +7,6 @@ obj.controller("vendorCrtl", ['$scope','$http','$log', function($scope, $http, $
 	$scope.venContDetails = []; //LOCAL ARRAYS
 	$scope.venFullAddress=[];  //REST DATA
 	$scope.objectIndex = '';
-	//$scope.showVendor=false;
 	$scope.vendorAddNew=false;
 	$scope.availableVendors = false;
 	$scope.enEdit = false;  //edit button after modal
