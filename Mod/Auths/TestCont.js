@@ -52,7 +52,6 @@ obj.controller("vendorCrtl", ['$scope','$http','$log', function($scope, $http, $
 			city:'',
 			state:'',
 			pincode:'',
-			
 		});
 	};
 	// AFTER MODAL CONTACT DETAILS - DEL EXTRA ADDED
@@ -63,8 +62,6 @@ obj.controller("vendorCrtl", ['$scope','$http','$log', function($scope, $http, $
 		if(countvenCddel<=1)
 		{
 			$scope.venConDel=false;
-			// $scope.topHeader=false;
-			// $scope.topDetail=false;
 		}
 	};
 	
@@ -96,8 +93,6 @@ obj.controller("vendorCrtl", ['$scope','$http','$log', function($scope, $http, $
 		console.log(countvenCd);
 		$scope.modalBt=false;
 	}
-	
-	
 	$scope.addFullDet = function(index){
 		$scope.ModalBody=true;
 		addModalFullDet(index);
