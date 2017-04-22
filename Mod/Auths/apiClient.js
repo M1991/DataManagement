@@ -36,8 +36,7 @@ var apiClientApp = angular
 					}
 				});
 
-apiClientApp
-		.controller(
+apiClientApp.controller(
 				'apiClientController',
 				function($scope, $http, $resource) {
 
@@ -297,7 +296,6 @@ apiClientApp
 									dbResourceSubsList["condition" + i] = ($scope.resourceSubsList[i].conditionValue == "undefined" ? ''
 											: $scope.resourceSubsList[i].conditionValue);
 								}
-
 							}
 							// Setting serialNumList
 							for (var i = 0; i < $scope.serialNumList.length; i++) {
@@ -356,7 +354,6 @@ apiClientApp
 						$scope.onChangeType(data.type);
 						$scope.onChangeDelPolicy(data.deletionPolicy);
 						$scope.selectedEvent = data.events;
-						
 						$scope.resourceList =  data.resourceDetails;
 						$scope.serialList = data.serialNumList;
 						
