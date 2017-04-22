@@ -1,5 +1,4 @@
-angular
-		.module('hello', [ 'ngRoute', 'auth', 'home', 'message', 'navigation' ])
+angular.module('hello', [ 'ngRoute', 'auth', 'home', 'message', 'navigation' ])
 		.config(
 
 				function($routeProvider, $httpProvider, $locationProvider) {
@@ -23,9 +22,7 @@ angular
 					$httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 				}).run(function(auth) {
-
 			// Initialize auth module with the home page and login/logout path
 			// respectively
 			auth.init('/', '/login', '/logout');
-
 		});
