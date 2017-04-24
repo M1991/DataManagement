@@ -258,7 +258,6 @@ apiClientApp.controller(
 									var message = 'Registration saved Successfully';
 									displayMessage('msg',message);
 									//$scope.cssClass = "msg";
-									
 								});
 						authRes.error(function(data, status, headers, config) {
 							var message = 'Failed to Save Registration';
