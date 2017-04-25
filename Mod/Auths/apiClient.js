@@ -436,8 +436,7 @@ apiClientApp.controller(
 
 									for (var j = 0; j < obj.length; j++) {
 										setSubscriptionObj(obj[j]);
-										$scope.listSubscription
-												.push($scope.subDetails);
+										$scope.listSubscription.push($scope.subDetails);
 									}
 								});
 						$scope.showSubsData();
