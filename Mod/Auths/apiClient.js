@@ -176,6 +176,7 @@ apiClientApp.controller(
 						$scope.resultResp = false;
 						$scope.responseData = {};
 						$scope.isResponseData = false;
+						
 						$scope.listResponseData = [];
 						dbSerialNumList = [];
 						dbResourceSubsList = {};
@@ -430,8 +431,7 @@ apiClientApp.controller(
 								sync : true
 							}
 						});
-						listSub
-								.get(function(obj) {
+						listSub.get(function(obj) {
 									$scope.listSubscription = [];
 
 									for (var j = 0; j < obj.length; j++) {
