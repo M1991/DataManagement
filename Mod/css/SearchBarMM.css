@@ -65,8 +65,7 @@ MINIZIABLE SEARCH BAR
         padding-left: 3px;
         padding-left: 4px \9;
         /* IE7-8 doesn't have border-radius, so don't indent the padding */
- 
-        margin-bottom: 0;
+        margin-bottom:0px;
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
         border-radius: 3px;
