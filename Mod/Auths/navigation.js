@@ -19,8 +19,7 @@ navigationApp
 								//$scope.message = "Authentication Saved Successfully";
 								alert("data = "+data);
 								//$scope.cssClass = "msg";
-								
-							});
+								});
 					authRes.error(function(data, status, headers, config) {
 						alert("error = "+data);
 					});
