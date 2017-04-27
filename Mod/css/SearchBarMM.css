@@ -53,8 +53,7 @@ MINIZIABLE SEARCH BAR
 }
 
 */
-
-    #custom-search-form {
+  #custom-search-form {
         margin:0;
         margin-top: 5px;
         padding: 0;
@@ -72,8 +71,7 @@ MINIZIABLE SEARCH BAR
         -moz-border-radius: 3px;
         border-radius: 3px;
     }
- 
-    #custom-search-form button {
+  #custom-search-form button {
         border: 0;
         background: none;
         /** belows styles are working good */
