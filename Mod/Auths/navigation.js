@@ -14,8 +14,7 @@ navigationApp
 						msmServerUrl : $scope.loginDetails.msmServerUrl
 					};
 					var authRes = $http.post('/authenticateMSM', authDataObj);
-					authRes
-							.success(function(data, status, headers, config) {
+					authRes.success(function(data, status, headers, config) {
 								//$scope.message = "Authentication Saved Successfully";
 								alert("data = "+data);
 								//$scope.cssClass = "msg";
