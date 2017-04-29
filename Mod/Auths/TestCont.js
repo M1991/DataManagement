@@ -180,8 +180,7 @@ obj.controller("vendorCrtl", ['$scope','$http','$log', function($scope, $http, $
 		$scope.cstNum='';
 		$scope.panNum='';
 	};
-	
-	
+
 	//Printable Area
 	// Issue is after print functions doesnot work
 	// $scope.printdiv = function (divName) {
