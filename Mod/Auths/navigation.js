@@ -1,7 +1,6 @@
 var navigationApp = angular.module("authenticationApp", [ 'ngResource']);
 
-navigationApp
-.controller(
+navigationApp.controller(
 		'authenticationController',
 		function($scope, $http, $resource) {
 			$scope.loginDetails = {};
