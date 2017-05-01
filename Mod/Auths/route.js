@@ -1,8 +1,5 @@
 angular.module('hello', [ 'ngRoute', 'auth', 'home', 'message', 'navigation' ])
-		.config(
-
-				function($routeProvider, $httpProvider, $locationProvider) {
-
+		.config(function($routeProvider, $httpProvider, $locationProvider) {
 					$locationProvider.html5Mode(true);
 
 					$routeProvider.when('/', {
