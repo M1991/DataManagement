@@ -1,7 +1,6 @@
 var salesApp = angular.module("salesApp",[]);
 
-salesApp.controller(
-				'salesDetailsController',
+salesApp.controller('salesDetailsController',
 				function($rootScope, $scope, $http) {
 					$scope.purchaseOrderList = [];
 					$scope.quotationList = [];
@@ -210,8 +209,7 @@ salesApp.controller(
 							 	quantitySold: 0,
 							 	unitPrice: 0,
 							 	TotalAmt: 0
-					  });
-						 
+					  });						 
 					}
 					$scope.showIDC = function() {
 						clear();
@@ -253,8 +251,7 @@ salesApp.controller(
 							itemId: '',
 							itemName:'',
 							noOfUnits:0,
-							unitPrice: 0
-							
+							unitPrice: 0							
 						});
 					}
 					$scope.enableEditF = function(itemId) {
@@ -426,7 +423,6 @@ salesApp.controller(
 									discount: itemListData[i].discount
 						  });
 						}*/
-					}
-					
+					}					
 				}
 			);
