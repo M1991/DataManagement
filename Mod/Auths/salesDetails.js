@@ -336,8 +336,7 @@ salesApp.controller('salesDetailsController',
 							contact : contact
 						}
 						var newVendorRes = $http.post('/vendor', newVendorObj);
-						newVendorRes
-								.success(function(data, status, headers, config) {
+						newVendorRes.success(function(data, status, headers, config) {
 									//$scope.message = "Authentication Saved Successfully";
 									//$scope.showSubmit = false;
 									setNewVendorObj(data);
