@@ -1,6 +1,5 @@
 angular.module('auth', []).factory(
 		'auth',
-
 		function($rootScope, $http, $location) {
 
 			enter = function() {
