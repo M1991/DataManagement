@@ -346,7 +346,7 @@ salesApp.controller('salesDetailsController',
 									//$scope.cssClass = "msg";
 									
 								});
-						newVendorRes.error(function(data, status, headers, config) {
+					newVendorRes.error(function(data, status, headers, config) {
 							/*var message = 'Failed to Save Registration';
 							displayMessage('error',message);*/
 						});
