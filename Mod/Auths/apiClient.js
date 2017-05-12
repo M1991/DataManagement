@@ -239,8 +239,7 @@ apiClientApp.controller(
 					$scope.createAuth = function() {
 						var auth = $resource("/auth");
 						var authDataObj = {
-							authId : ($scope.authDetails.authId != 0) ? $scope.authDetails.authId
-									: 0,
+							authId : ($scope.authDetails.authId != 0) ? $scope.authDetails.authId: 0,
 							authName : $scope.authDetails.authName,
 							msmLogin : $scope.authDetails.msmLogin,
 							msmPassword : CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse($scope.authDetails.msmPassword)),
