@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html ng-app="salesApp">
+<head>
+<title>Data Management</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="content-language">
+<meta charset="UTF-8">
+<!-- <script src="js/sales/salesDetails.js"></script> -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="../js/bootstrap/js/tests/vendor/jquery.min.js"></script>
+<link rel="stylesheet" href="../css/bootstrap/dist/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="../css/navigationbar.css">
+<link href="../css/newBoot.css" rel="stylesheet">
+<link href="../css/SearchBarMM.css" rel="stylesheet">
+<script src="../js/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- <link href="../css/site.css" rel="stylesheet" type="text/css" /> -->
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<!--
+
+<script src="../js/bootstrap/dist/js/bootstrap.js"></script>
+ <script src="../js/jquery.bootstrap.newsbox.min.js"></script>-->
+  <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+<script src="../js/jquery/dist/jquery.min.js"></script>
+ 
+    <script src="../js/jquery/ui/jquery-ui.js"></script>
+	<script src="../js/funcWork.js"></script>
+<!--
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+
+<!--<script src="../js/bootstrap/dist/js/bootstrap.min.js"></script>-->
+<script src="../js/angular.min.js"></script>
+<script src="../js/route.js"></script>
+<script src="../js/sanitize.js"></script>
+
+<script src="../js/navroute.js"></script>
+
+<script src="../js/TestCont.js"></script>
+<script src="../js/addDetailsQuotation.js"></script>
+<script src="../js/addDetailsEnquiry.js"></script>
+<script src="../js/addDetailsItemMaster.js"></script>
+<!-- <script src="../js/NotoWord.js"></script> -->
+
+<!--  
+		For adding Quotation lib details
+-->
+<script>
+$( function() {
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+  } );
+
+</script>
+
+</head>
+<style>
+
+
+	
+</style>
+<body ng-controller="homeController">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="row topLogo">
+					<div class="col-sm-12">
+						<a href="#/"><img src="../images/logotv.png" height="40" width="50" align="left"></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-9">
+				<div class="row">
+					<div class="col-sm-8">
+						<div id="imaginary_container"> 
+							<form class="navbar-form" role="search" onsubmit="">
+								<div class="input-group">
+									<input type="text" class="form-control" placeholder="Search Everything You Want" name="q" style="width:350px;">
+									<div class="input-group-btn" id="barsearch">
+										<button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="col-sm-4 pager">
+						<li><a href="#" id="logb">Login </a></li>
+					</div>
+				</div>
+			</div>
+		</div><!-- Top LOGO + SEARCH ENDS-->
+		<div class="row" id="navg">
+			<nav class="navbar navbar-default">
+			  <div class="container-fluid conDesign">
+				<div class="navbar-header">
+					<!--	<div class="dropdown">
+							<button class="dropbtn">Dropdown</button>
+							  <div class="dropdown-content">
+								<a href="#">Link 1</a>
+								<a href="#">Link 2</a>
+								<a href="#">Link 3</a>
+							</div>
+						</div>
+				-->
+				
+						<ul class="nav nav-pills">
+							<li class="dropdown clk"> <!-- Admin  -->
+								<a href="#" data-toggle="dropdown" class="dropdown-toggle"><div class="navalign"><span class="glyphicon glyphicon-user"></span><br>Admin</div></a>
+								<ul class="dropdown-content">
+									<li><a href="#showUser">User</a></li>
+									<li><a href="#changePass">Change Password</a></li>
+									<li><a href="#" ng-click="">Log off</a></li>
+								</ul>
+							</li>
+							<li class="dropdown"> <!-- Monitor  -->
+								<a href="#" data-toggle="dropdown" class="dropdown-toggle"><div class="navalign"><span class="glyphicon glyphicon-blackboard"></span><br>Monitor</div></a>
+								<ul class="dropdown-content">
+									<li><a href="#" ng-click="">Sales</a></li>
+									<li><a href="#" ng-click="">Purchase</a></li>
+								</ul>
+							</li>
+							
+							<li class="dropdown"> <!-- Material Management  -->
+								<a href="#" data-toggle="dropdown" class="dropdown-toggle"><div class="navalign"><span class="glyphicon glyphicon-cog"></span><br>Material Management</div></a>
+								<ul class="dropdown-content">
+									<li><a href="#showEnquiry">Enquiry</a></li>
+									<li><a href="#showQuotation">Quotation</a></li>
+									<li><a href="#showPurchaseOrder">Purchase Order</a></li>
+									<li><a href="#showIDC">Inward Delivery Challan</a></li>
+									<li><a href="#showItemMaster">Item Master</a></li>
+									<li><a href="#showVendors">Vendors</a></li>
+									<li><a href="#showInvoice">Invoice</a></li>
+								</ul>
+							</li>
+							<li class="dropdown"> <!--  Sales -->
+								<a href="#" data-toggle="dropdown" class="dropdown-toggle"><div class="navalign"><span class="glyphicon glyphicon-th-list"></span><br>Sales</div></a>
+								<ul class="dropdown-content">
+									<li><a href="#showCusEnquiry">Customer Enquiry</a>
+									</li>
+									<li><a href="#showGenQuotation">Generate Quotation</a>
+									</li>
+									<li><a href="#showSalesPurchaseOrder">Sales Purchase Order</a>
+									</li>
+									<li><a href="#showDC">Delivery Challan</a>
+									</li>
+									<li><a href="#" ng-click="showItemMaster()">Customer Master</a>
+									</li>
+									<li><a href="#" ng-click="showInvoice()">Invoice</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown"> <!--   Transactions  -->
+								<a href="#" data-toggle="dropdown" class="dropdown-toggle"><div class="navalign"><span class="glyphicon glyphicon-file"></span><br>Transactions</div></a>
+								<ul class="dropdown-content">
+									<li><a href="#showReceivable">Receivable</a></li>
+									<li><a href="#showPayable">Payable</a></li>
+									<li><a href="#showBank">Bank</a></li>
+									<li><a href="#showCash">Cash</a></li>
+									<li><a href="#showExpenses">Expenses</a></li>
+								</ul>
+							</li>
+							<li class="dropdown"> <!--  Calls -->
+								<a href="#" data-toggle="dropdown" class="dropdown-toggle"><div class="navalign"><span class="glyphicon glyphicon-earphone"></span><br>Calls</div></a>
+								<ul class="dropdown-content">
+									<li><a href="#showamc">AMC</a></li>
+									<li><a href="#showProject">Project Call</a></li>
+									<li><a href="#" ng-click="">Service Call</a></li>
+								</ul>
+							</li>
+							<li class="dropdown"> <!--  Vehicle Tracking Management -->
+								<a href="#" data-toggle="dropdown" class="dropdown-toggle"><div class="navalign"><span class="glyphicon glyphicon-tag"></span><br>Vehicle Tracking</div></a>
+								<ul class="dropdown-content">
+									<li><a href="#" ng-click="">Two-wheeler</a></li>
+									<li><a href="#" ng-click="">Four-wheeler</a></li>
+									<li><a href="#" ng-click="">Service Period</a></li>
+									
+								</ul>
+							</li>
+							<li class="dropdown"> <!-- Report  -->
+								<a href="#" data-toggle="dropdown" class="dropdown-toggle"><div class="navalign"><span class="glyphicon glyphicon-briefcase"></span><br>Report</div></a>
+								<ul class="dropdown-content">
+									<li><a href="#" ng-click="">Stock</a></li>
+									<li><a href="#" ng-click="">Cash</a></li>
+									<li><a href="#" ng-click="">Bank</a></li>
+									<li><a href="#" ng-click="">Quotation</a></li>
+									<li><a href="#" ng-click="">Project Management</a></li>
+								</ul>
+							</li>
+							<li class="dropdown"> <!--  Help -->
+								<a href="#" data-toggle="dropdown" class="dropdown-toggle"><div class="navalign"><span class="glyphicon glyphicon-info-sign"></span><br>Help</div></a>
+								<ul class="dropdown-content">
+									<li><a href="#" ng-click="">Support Details</a></li>
+									<li><a href="#" ng-click="">About Software</a></li>
+									<li><a href="#" ng-click="">Extend Evaluation</a></li>
+								</ul>
+							</li>
+						</ul>
+				</div>
+			  </div>
+			</nav> 			
+			
+			
+			
+		</div><!--  ALL NAVIGATION ENDS-->
+		
+		<div class="row"><!--  TEXTS, ENQUIRY BOX STARTS-->
+			<div class="col-sm-9"> <!-- userContent for background image -->
+			
+				<ng-view> </ng-view><br><br>
+				
+			</div>
+			<div class="col-sm-3">
+				<div class="panel panel-gry">
+				  <div class="panel-heading">
+					<h3 class="panel-title">Recent Updates</h3>
+				  </div>
+				  <div class="panel-body">
+					<ul>
+						<li><a href="#">Vincent has buyed 100 soaps</a></li>
+						<li><a href="#">Nazia has sold 200 chips</a></li>
+						<li><a href="#">Rose has updated the cart</a></li>
+						<li><a href="#">Vincent has buyed 500 pastes</a></li>
+						<li><a href="#">Uday has updated the lot</a></li>
+					</ul>
+				  </div>
+				</div>
+				<div class="panel panel-gry">
+				  <div class="panel-heading">
+					<h3 class="panel-title">Customization</h3>
+				  </div>
+				  <div class="panel-body">
+					
+				  </div>
+				</div>
+				
+				<div class="panel panel-gry">
+				  <div class="panel-heading">
+					<h3 class="panel-title">Remainders</h3>
+				  </div>
+				  <div class="panel-body">
+					
+				  </div>
+				</div>
+			</div>
+		</div><!--  TEXTS, ENQUIRY BOX ENDS-->
+		<div class="row"><!--  DOWN ALL  STARTS -->
+			<div class="col-sm-4"></div>
+			<div class="col-sm-8"></div>
+		</div><!--  DOWN ALL ENDS -->
+		<br>
+		<br>
+		<br>
+	</div>
+	
+	
+	
+</body>
+</html>
