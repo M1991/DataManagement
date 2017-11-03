@@ -1,0 +1,15 @@
+Automated Emails
+
+https://www.aspsnippets.com/Articles/Automatically-send-emails-daily-at-specific-time-using-Windows-Service-in-C-and-VBNet.aspx
+
+http://www.aspdotnet-suresh.com/2011/06/creating-windows-service-in-c-or.html
+
+http://www.c-sharpcorner.com/article/create-excel-file-on-the-fly-and-send-as-an-email-attachment/
+
+
+
+
+
+
+
+
