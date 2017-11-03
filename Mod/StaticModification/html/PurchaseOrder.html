@@ -1,0 +1,226 @@
+<!--
+<div ng-show="isPurchase">
+<br>
+ </div> -->
+ <div ng-controller="purchCrtl">
+	<div class="smTopWell">
+	<div class="row">
+		<div class="col-sm-5">
+			<h4>Purchase Order</h4>
+		</div>
+		<div class="col-sm-7">
+			<div class="mmSearch">
+				<form class="navbar-form" name="" role="search" onsubmit="">
+					<div class="input-group">
+						<input type="search" ng-model="searchData" class="form-control innerFormSearch" placeholder="Search..." name="q"/>
+						<div class="input-group-btn">
+							<button class="btn btn-default innerFormSearch" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	</div>
+	
+	<form method="POST" name="purchaseForm" class="form-inline smWell" role="form">
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="row">
+					<div class="col-sm-4">Vendor ID</div>
+					<div class="col-sm-8"><input type="text" class="smBox" name="povendorid" required/></div>
+				</div> 
+			</div>
+			<div class="col-sm-6">
+				<div class="row">
+					<div class="col-sm-4">Vendor Name</div>
+					<div class="col-sm-8"><input type="text" class="smBox" name="povendorname" required/></div>
+				</div>
+			</div>
+			
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="row">
+					<div class="col-xs-4">P.O Giver Name:</div>
+				<div class="col-xs-8">
+					<select name="poRef" required ng-model="quotn.quoteRef" class="smBox">
+						<option ng-repeat="er in quotRef" value="{{er.ref}}">{{er.ref}}</option>
+					</select>
+				</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="row">
+					<div class="col-xs-4">Financial Year</div>
+				<div class="col-xs-8">
+					<select name="showFincYear" required ng-model="quotn.quotGenPerson" class="smBox">
+									<option ng-repeat="er in fincyear" value="{{er.ref}}">{{er.ref}}</option>
+					</select>
+				</div>
+				</div>
+			</div>
+		</div>
+			<div class="form-inline">
+				
+						<div class="row" ng-show="topDetail"><hr>
+							<div class="col-sm-6"><label>Add Details</label></div>
+							<div class="col-sm-6"></div>
+						</div>
+						<div class="row" ng-show="topHeader">
+							<div class="col-xs-2">Item ID</div>
+							<div class="col-xs-2">Item Name</div>
+							<div class="col-xs-1">UOM</div>
+							<div class="col-xs-1">Quantity</div>
+							<div class="col-xs-1">Unit Price</div>
+							<div class="col-xs-1">Discount</div>
+							<div class="col-xs-2">Tax</div>
+							
+							<div class="col-xs-1">Amount</div>
+						</div>
+					<div ng-show="showPOform" data-ng-repeat="choice in quotationList">
+							<br>
+							<div class="row">
+								<div class="col-xs-2">
+									<input type="text" name="itemId" class="smBox" ng-model="choice.itemId" placeholder="Item ID" style="width:80%">
+								
+								</div>
+								<div class="col-xs-2">
+									<input type="text" name="itemName" class="smBox"  ng-model="choice.itemName" placeholder="Item Name" style="width:90%">
+								</div>
+								<div class="col-xs-1">
+									<input type="text" name="uom" class="smBox"  ng-model="choice.uom" placeholder="UOM" style="width:100%">
+								</div>
+								<div class="col-xs-1">
+									<input type="text" name="quantity" class="smBox" ng-model="choice.quantity" placeholder="Quantity" style="width:80%">
+								</div>
+								<div class="col-xs-1">
+									<input type="text" name="price" class="smBox"  ng-model="choice.unitPrice" placeholder="Unit Price" style="width:80%">
+								</div>
+								<div class="col-xs-1">
+									<input type="text" name="discount" class="smBox"  ng-model="choice.discount" placeholder="Discount" style="width:80%">
+								</div>
+								<div class="col-xs-2">
+									<select name="tax" style="width:90%">
+											<option value="14.2">14.2%</option>
+											<option value="5.4">5.2%</option>
+									</select>
+									
+								</div>
+								<div class="col-xs-1">
+									<input type="text" name="amount" class="smBox"  ng-model="choice.amount" placeholder="Amount" style="width:100%">
+								</div>
+								<div class="col-xs-1">
+									<button ng-click="removeNewChoice($index)">
+									<span class="glyphicon glyphicon-remove"></span>
+								</button>
+								</div>	
+							</div>
+						
+				
+					</div>
+						<!--
+						<div class="row">			
+							<div class="col-sm-6">
+								<div class="row">
+									<div class="col-sm-4">Item ID:</div>
+									<div class="col-sm-8"><input type="text" name="itemId" class="smBox" ng-model="choice.itemId" placeholder="Item ID"></div>
+								</div>
+								<br>
+								<div class="row"><div class="col-sm-4">Item Name:</div>
+									<div class="col-sm-8"><input type="text" name="itemName" class="smBox"  ng-model="choice.itemName" placeholder="Item Name">
+								</div>
+								</div>
+								<br>
+								<div class="row"><div class="col-sm-4">UOM:</div>
+									<div class="col-sm-8">	<input type="text" name="uom" class="smBox"  ng-model="choice.uom" placeholder="UOM">
+								</div>
+								</div><br>
+								<div class="row"><div class="col-sm-4">Quantity:</div>
+									<div class="col-sm-8"><input type="text" name="quantity" class="smBox" ng-model="choice.quantity" placeholder="Quantity">
+								</div>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="row">
+									<div class="col-sm-4">Unit Price:</div>
+									<div class="col-sm-8"><input type="text" name="price" class="smBox"  ng-model="choice.unitPrice" placeholder="Unit Price">
+									</div>
+								</div>
+								<br>
+								<div class="row"><div class="col-sm-4">Discount:</div>
+									<div class="col-sm-8">
+									<input type="text" name="discount" class="smBox"  ng-model="choice.discount" placeholder="Discount">
+								</div>
+								</div><br>
+								<div class="row"><div class="col-sm-4">Amount:</div>
+									<div class="col-sm-8">
+									<input type="text" name="amount" class="smBox"  ng-model="choice.amount" placeholder="Amount">
+								</div>
+								</div>
+							</div>
+						</div>  -->
+			</div>
+			<br>			
+			<div class="row">	<!-- formPO for Purchase Order forms --->
+				<div class="col-sm-6">
+					<div class="x_title">Payment Terms and Conditions:</div>
+					<input type="text" class="lgBox" name="paymentTnC" value="">
+				</div>
+				<div class="col-sm-6">
+					<div class="x_title">Delivery Terms and Conditions:</div>
+					<input type="text" class="lgBox" name="deliveyTnC" value="">
+				</div>
+			</div>
+			
+			<hr>
+			<b>Shipping Details</b>
+			<div class="row">
+					<div class="col-sm-6">
+						<div class="row">
+							<div class="col-sm-4">First Name:</div>
+							<div class="col-sm-8"><input type="text" class="smBox" name="sdFirstName"></div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-sm-4">Last Name:</div>
+							<div class="col-sm-8"><input type="text" class="smBox" name="sdLastName"></div>
+						</div>
+					</div>	
+					<div class="col-sm-6">
+						<div class="row">
+							<div class="col-sm-2">Address:</div>
+							<div class="col-sm-10"><textarea rows="3" cols="18" class="mdBox" name="sdaddress"></textarea></div>
+						</div>
+					</div>
+			</div>		
+			<hr>
+			<div class="row" style="display:block;">
+						<div class="col-sm-1"></div>
+						<div class="col-sm-2">
+								<button ng-model="showAdd" ng-click="addNewChoice(showAdd)">
+									<span class="glyphicon glyphicon-plus"></span> Add
+								</button>
+						</div>
+						<div class="col-sm-2">
+							<button ng-click="editPO()"><span class="glyphicon glyphicon-pencil"></span> Edit</button>
+						</div>
+						<div class="col-sm-2">
+							<button type="submit" ng-click="deletePO()"><span class="glyphicon glyphicon-remove"></span> Delete</button>
+						</div>
+						<div class="col-sm-2">
+							<button type="submit"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
+						</div>
+						
+						<div class="col-sm-2">
+							<button onclick="window.print()"><span class="glyphicon glyphicon-print"></span> Print</button>
+						</div>
+						<div class="col-sm-1"></div>
+			</div>
+		
+		
+		
+	</form>
+		
+</div>

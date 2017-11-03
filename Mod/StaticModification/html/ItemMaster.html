@@ -1,0 +1,268 @@
+<!-- <div ng-show="isItemMaster">
+<br> -->
+
+	<div class="smTopWell">
+	<div class="row">
+		<div class="col-sm-5">
+			<h4>Item Master</h4>
+		</div>
+		<div class="col-sm-7">
+			<div class="mmSearch">
+				<form class="navbar-form" name="" role="search">
+					<div class="input-group">
+						<input type="text" class="form-control innerFormSearch" placeholder="Search..." name="q">
+						<div class="input-group-btn">
+							<button class="btn btn-default innerFormSearch" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div class="smWell">
+		<div ng-controller="itemMasterAddCtrl">
+			<label class="radio-inline"><input type="radio" id="search" ng-model="addItem" value="search" ng-change="showSearch(addItem)" ng-click="uncheck($event)">Search Item</label>
+			<label class="radio-inline"><input type="radio" id="newItem" ng-model="addItem" value="newItem"  ng-change="showNewItem(addItem)" ng-click="uncheck($event)">Add New Item</label>
+				<form method="post" name="quotationForm" ng-show="isAddNewItem" class="form-inline" ng-submit="addNewItemMaster()"><!--   data-ng-repeat="newItemMasterDetails in ItemMasterList"  -->
+						<div class="row">
+							<hr>
+								<div class="col-sm-6"><label>Add Items</label></div>
+								<div class="col-sm-6"></div>
+						</div>
+						<div class="row">
+								<div class="col-xs-2">Item ID</div>
+								<div class="col-xs-2">Item Name</div>
+								<div class="col-xs-3">Description</div>
+								<div class="col-xs-3">Specification</div>
+								<div class="col-xs-2">UOM</div>
+						</div>
+						<div class="row">
+								<div class="col-xs-2">
+									<input type="text" class="smBox" name="itemId" ng-model="newItemMasterDetails.itemId" disabled="disabled">
+								</div>
+								<div class="col-xs-2">
+									<input type="text" class="smBox" name="itemName" ng-model="newItemMasterDetails.itemName">
+								</div>
+								<div class="col-xs-3">
+									<input type="text" class="sdBox" name="desc" ng-model="newItemMasterDetails.description">
+								</div>
+								<div class="col-xs-3">
+									<input type="text" class="sdBox" name="spec" ng-model="newItemMasterDetails.specification">
+								</div>
+								<div class="col-xs-2">
+									<input type="text" class="smBox" name="uom" ng-model="newItemMasterDetails.uom" style="width:70%">
+								</div>
+						</div>
+						<br>
+						<div class="row"><!--
+							<div class="col-sm-2">
+								<button ng-model="addItemMaster" ng-click="addNewItem(addItemMaster)">
+									<span class="glyphicon glyphicon-plus"></span>
+								</button>
+							</div> -->
+							<div class="col-sm-2">
+								<button type="submit"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
+							</div>
+						</div>
+						
+				</form>
+			<form method="get" name="itemMasterForm" class="form-inline" role="form">
+					<div class="col-sm-7">
+						<div ng-show="isSearch">
+							<br>
+							<div class="form-group">
+								<label>Enter Id: </label>
+								<input type="text" name="searchId" class="form-control" value="" ng-keypress="showSearchResults()">
+							</div>
+						</div>
+						<div ng-show="searchRes">
+							<br><br>
+							<div class="x_title"><b>Items Details Present</b></div>
+						</div>
+					</div>
+					<div class="col-sm-12">
+						<div ng-repeat="sRes in searchResList">
+							<br>
+							<div class="row">
+								<div class="col-xs-2">
+									<label>Item Id: </label>
+									<input type="text" name="itemId"  class="sdBox" ng-model="sRes.itemId" ng-disabled="enableEdit" style="width: 85%">
+								
+								</div>
+								<div class="col-xs-3">
+									<label>Item Name: </label>
+									<input type="text" name="itemName"  class="sdBox" ng-model="sRes.itemName" ng-disabled="enableEdit" style="width: 85%">
+								</div>
+								<div class="col-xs-2">
+									<label>Units Left: </label>
+									<input type="text" name="noOfUnits"  class="sdBox" ng-model="sRes.noOfUnits" ng-disabled="enableEdit" style="width: 85%">
+								</div>
+								<div class="col-xs-3">
+									<label>Unit Price: </label>
+									<input type="text" name="unitPrice"  class="sdBox" ng-model="sRes.unitPrice" ng-disabled="enableEdit" style="width: 85%">
+								</div>
+								<div class="col-xs-2">
+									<button style="margin-top:25px;" ng-click="enableEditF(sRes.itemId)"><span class="glyphicon glyphicon-pencil"></span></button>
+								<!--	&nbsp;
+									<button style="margin-top:25px;" ng-click="enableDel(sRes.itemId)"><span class="glyphicon glyphicon-trash"></span></button>
+								-->	
+								</div>	
+							</div>
+						</div>
+						
+						<div class="form-group" ng-show="searchRes"> 
+						<br><br>
+							<button type="submit"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
+						</div>
+					</div>
+			</form>
+		</div>
+
+
+	</div>
+<!--
+
+<div class="col-sm-12">
+<div class="form-group">
+<label class="radio-inline"><input type="radio" id="search" ng-model="checked" value="search" ng-click="showSearch('search')">Search Item</label>
+<label class="radio-inline"><input type="radio" id="newItem" ng-model="checked" value="newItem"  ng-click="showNewItem('newItem')">Add New Item</label>
+</div>
+</div>
+
+<form method="post" name="quotationForm" ng-show="isAddNewItem" class="form-inline" ng-submit="addNewItemMaster()">
+<div class="col-sm-6">
+
+
+<div class="x_title">Item Details:</div>
+
+<div class="form-group col-xs-6">
+<label>Item Id:</label> <input type="text" class="form-control" name="vendor" ng-model="newItemMasterDetails.itemId" disabled="disabled"></div>
+
+<div class="form-group col-xs-6">
+<label>Item Name: </label><input type="text" class="form-control" name="vendorName" ng-model="newItemMasterDetails.itemName"></div>
+
+<br><br>
+<div class="form-group col-xs-6">
+<label>Description:</label> <input type="text" class="form-control" name="vendor" ng-model="newItemMasterDetails.description"></div>
+
+<div class="form-group col-xs-6">
+<label>Specification:  </label><input type="text" class="form-control" name="vendorName" ng-model="newItemMasterDetails.specification"></div>
+
+<br><br>
+<div class="form-group col-xs-6">
+<label>UOM:</label> <input type="text" class="form-control" name="vendor" value="" ng-model="newItemMasterDetails.uom" ></div>
+
+</div>
+
+ <div class="col-sm-12">
+<!--<div class="form-group">
+<br/>
+<br/>
+<button type="button" class="btn btn-info" ng-click="addQuotation()">
+    <span class="glyphicon glyphicon-plus"></span>  Add Item Details
+</button>
+</div>
+</div>
+<div class="col-sm-12">
+<div class="form-group" ng-repeat="quote in quotationList" ng-show="addQuote">
+				
+				<br>
+				<div class="col-xs-2">
+				<label>Item Id: </label>
+				<input type="text" name="itemName" class="form-control" ng-model="quote.itemId" style="width: 85%">
+				</div>
+				
+				<div class="col-xs-2">
+				<label>Item Name: </label>
+				<input type="text" name="itemName" class="form-control" ng-model="quote.itemName"  style="width: 85%">
+				</div>
+				
+				<div class="col-xs-2">
+				<label>Item Description: </label>
+				<input type="text" name="itemName" class="form-control" ng-model="quote.itemDesc"  style="width: 85%">
+				</div>
+				
+				<div class="col-xs-2">
+				<label>Unit Price: </label>
+				<input type="text" name="itemName" class="form-control" ng-model="quote.unitPrice"  style="width: 85%">
+				</div>
+				
+				<div class="col-xs-2">
+				<label>Quantity: </label>
+				<input type="text" name="quantity" class="form-control" ng-model="quote.quantity"  style="width: 85%">
+				</div>
+				
+				<div class="col-xs-2">
+				<label>Total Amount: </label>
+				<input type="text" name="price" class="form-control" ng-model="quote.totalAmt"  style="width: 85%">
+				</div>
+				<br>
+				<br>				
+
+</div> 
+
+<br>
+<br>
+<div class="form-group"> 
+    <button type="submit" class="btn btn-info">Submit</button>
+</div>
+</div>
+</form>		-->
+
+<!--
+<form method="get" name="itemMasterForm" class="form-inline" role="form">
+<div class="col-sm-7">
+
+<div ng-show="isSearch">
+<br>
+<div class="form-group">
+<label>Enter Id: </label>
+<input type="text" name="searchId" class="form-control" value="" ng-keypress="showSearchResults()">
+</div>
+</div>
+<div ng-show="searchRes">
+<br><br>
+<div class="x_title">Items Details</div>
+</div>
+</div>
+<div class="col-sm-12">
+<div ng-repeat="sRes in searchResList">
+<br><br>
+				<div class="col-xs-2">
+				<label>Item Id: </label>
+				<input type="text" name="itemName" class="form-control" ng-model="sRes.itemId" ng-disabled="enableEdit" style="width: 85%">
+				</div>
+				
+				<div class="col-xs-2">
+				<label>Item Name: </label>
+				<input type="text" name="itemName" class="form-control" ng-model="sRes.itemName" ng-disabled="enableEdit" style="width: 85%">
+				</div>
+				
+				<div class="col-xs-2">
+				<label>No Of Units Left: </label>
+				<input type="text" name="itemName" class="form-control" ng-model="sRes.noOfUnits" ng-disabled="enableEdit" style="width: 85%">
+				</div>
+				
+				<div class="col-xs-2">
+				<label>Unit Price: </label>
+				<input type="text" name="itemName" class="form-control" ng-model="sRes.unitPrice" ng-disabled="enableEdit" style="width: 85%">
+				</div>
+				<div>
+				<a href="#" ng-click="enableEditF(sRes.itemId)"><img ng-src="../images/edit-pencil.gif" ></a>
+				</div>
+		
+</div>
+<br><br>
+<div class="form-group" ng-show="searchRes"> 
+<br><br>
+    <button type="submit" class="btn btn-info">Save</button>
+</div>
+</div>
+</form>
+
+</div>
+
+
+-->

@@ -1,0 +1,95 @@
+<!-- <nav>
+<ul>
+  <li class="dropdown"><a class="{{styleClassH}}" href="#" ng-click="showHome()">Home</a></li>
+  <li class="dropdown">
+  <a href="#" class="dropbtn">Material Management &raquo;</a>
+	  <div class="dropdown-content">
+			<a href="#" ng-click="showEnquiry()">Enquiry</a>
+			<a href="#" ng-click="showQuotation()">Quotation</a>
+			<a href="#" ng-click="showPurchaseOrder()">Purchase Order</a>
+			<a href="#" ng-click="showIDC()">Inward Delivery Challan</a>
+			<a href="#" ng-click="showItemMaster()">Item Master</a>
+			<a href="#" ng-click="showVendors()">Vendors</a>
+	 </div>
+  </li>
+ <li class="dropdown"><a href="#" class="dropbtn">Sales &raquo;</a>
+ 		<div class="dropdown-content">
+			<a href="#" ng-click="showEnquiry()">Customer Enquiry</a>
+			<a href="#" ng-click="showQuotation()">Generate Quotation</a>
+			<a href="#" ng-click="showPurchaseOrder()">Save Purchase Order</a>
+			<a href="#" ng-click="showIDC()">Delivery Challan</a>
+			<a href="#" ng-click="showItemMaster()">Customer Master</a>
+	 </div>
+ </li>
+ <li style="float:right;"><span class="input-list style-2 clearfix"><input type="text" name="Search"></span>
+ 
+ </li>
+  <li style="float:right;list-style-type:none;"><a href="#">Login</a></li>
+  <li style="float:right;list-style-type:none;"><a href="#">About</a></li>
+</ul>
+</nav> -->
+<div class="bs-example" ng-style="{float:top}">
+    <ul class="nav nav-pills">
+        <li class="active"><a href="#" ng-click="showHome()">Home</a></li>
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Material Management <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="#" ng-click="showEnquiry()">Enquiry</a></li>
+                <li><a href="#" ng-click="showQuotation()">Quotation</a></li>
+                <li><a href="#" ng-click="showPurchaseOrder()">Purchase Order</a></li>
+                <li><a href="#" ng-click="showIDC()">Inward Delivery Challan</a></li>
+                <li><a href="#" ng-click="showItemMaster()">Item Master</a></li>
+                <li><a href="#" ng-click="showVendors()">Vendors</a></li>
+                <li><a href="#" ng-click="showInvoice()">Invoice</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Sales <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="#" ng-click="showEnquiry()">Customer Enquiry</a>
+                </li>
+                <li><a href="#" ng-click="showQuotation()">Generate Quotation</a>
+                </li>
+                <li><a href="#" ng-click="showPurchaseOrder()">Save Purchase Order</a>
+                </li>
+                <li><a href="#" ng-click="showIDC()">Delivery Challan</a>
+                </li>
+                <li><a href="#" ng-click="showItemMaster()">Customer Master</a>
+                </li>
+                <li><a href="#" ng-click="showInvoice()">Invoice</a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Transactions <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="#" ng-click="showReceivable()">Receivable</a></li>
+                <li><a href="#" ng-click="showPayable()">Payable</a></li>
+                <li><a href="#" ng-click="showBank()">Bank</a></li>
+                <li><a href="#" ng-click="showCash()">Cash</a></li>
+                <li><a href="#" ng-click="showExpenses()">Expenses</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Services <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <!-- <li><a href="#" ng-click="showBank()">Bank</a></li>
+                <li><a href="#" ng-click="showCash()">Cash</a></li>
+                <li><a href="#" ng-click="showExpenses()">Expenses</a></li> -->
+            </ul>
+        </li>
+        <li class="dropdown pull-right">
+           <input type="text" name="search" class="input-sm"> <button type="button" class="btn btn-info">
+    <span class="glyphicon glyphicon-search"></span> Search
+  </button>
+        </li>
+        <li class="dropdown pull-right">
+            <a href="#" >Login </a>
+        </li>
+        <li class="dropdown pull-right">
+            <a href="#" >About </a>
+        </li>
+        
+         
+    </ul>
+    </div>
